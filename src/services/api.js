@@ -7,7 +7,7 @@ export async function fetchApi(url) {
     }
 }
 
-export async function fetchMenu() {
-    const data = await fetchApi('https://panjs.com/ywc.json');
-    return data.navbarItems;
+export async function fetchChimShopChai() {
+    return await fetchApi('https://panjs.com/ywc.json');
+    
 }
