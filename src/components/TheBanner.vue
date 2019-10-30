@@ -17,6 +17,14 @@
     </div>
 </template>
 <style>
+    .banner {
+        margin: 55px 0 0 0;
+    }
+    @media (max-width: 530px) {
+        .banner {
+            margin: 70px 0 0 0; 
+        }
+    }
     .cover1 {
         height: 50vw;
         max-height: 350px;
