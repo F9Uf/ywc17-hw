@@ -10,12 +10,14 @@
                         </span>
                     </h3>
                 </b-col>
-                <b-col cols="12">
+                <b-col cols="12 mt-4">
                     <span v-html="detail"></span>
                 </b-col>
-                <b-col cols="12">
-                    เงื่อนไขการเข้าร่วมมาตรการ <br><br>
-                    <span v-html="condition"></span>
+                <b-col cols="12 mt-4">
+                    <div>เงื่อนไขการเข้าร่วมมาตรการ</div>
+                    <div class="mt-2">
+                        <span v-html="condition"></span>
+                    </div>
                 </b-col>
             </b-row>
         </b-container>
