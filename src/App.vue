@@ -5,6 +5,7 @@
     <the-regist :duration="duration" />
     <the-detail :detail="detail" :condition="condition"/>
     <the-contact />
+    <the-ktc />
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import TheBanner from './components/TheBanner'
 import TheRegist from './components/TheRegist'
 import TheDetail from './components/TheDetail'
 import TheContact from './components/TheContact'
+import TheKtc from './components/TheKtc'
 
 export default {
   name: 'app',
@@ -27,7 +29,7 @@ export default {
     }
   },
   components: {
-    TheNavbar, TheBanner, TheRegist, TheDetail, TheContact
+    TheNavbar, TheBanner, TheRegist, TheDetail, TheContact, TheKtc
   },
   async created() {
     const data = await fetchChimShopChai();
