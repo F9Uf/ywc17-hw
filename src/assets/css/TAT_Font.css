@@ -1,0 +1,14 @@
+@font-face {
+    font-family: TATSanaChon;
+    src: url('../fonts/TATSanaChon-Regular.woff2');
+}
+
+@font-face {
+    font-family: TATSanaSuksa;
+    src: url('../fonts/TATSanaSuksa-Regular.woff2');
+}
+
+@font-face {
+    font-family: TATSanaChonBold;
+    src: url('../fonts/TATSanaChon-Bold.woff2');
+}

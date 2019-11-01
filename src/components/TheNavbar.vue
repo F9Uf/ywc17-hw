@@ -35,5 +35,13 @@ export default {
 </script>
 
 <style>
-    
+@font-face {
+  font-family: TATSanaChon;
+  src: url('../assets/font/TATSanaChon-Regular.woff2');
+}
+.header li.nav-item a{
+    font-family: TATSanaChon;
+    font-size: 13px;
+    font-weight: bold;
+}
 </style>

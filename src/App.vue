@@ -6,6 +6,7 @@
     <the-detail :detail="detail" :condition="condition"/>
     <the-contact />
     <the-ktc />
+    <the-nav-foot />
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import TheRegist from './components/TheRegist'
 import TheDetail from './components/TheDetail'
 import TheContact from './components/TheContact'
 import TheKtc from './components/TheKtc'
+import TheNavFoot from './components/TheNavFoot'
 
 export default {
   name: 'app',
@@ -29,7 +31,8 @@ export default {
     }
   },
   components: {
-    TheNavbar, TheBanner, TheRegist, TheDetail, TheContact, TheKtc
+    TheNavbar, TheBanner, TheRegist, TheDetail, TheContact, TheKtc,
+    TheNavFoot
   },
   async created() {
     const data = await fetchChimShopChai();
@@ -44,4 +47,10 @@ export default {
 </script>
 
 <style>
+@import url('./assets/css/TAT_Font.css');
+
+* {
+  font-family: TATSanaSuksa ;
+  /* font-size: 16px; */
+}
 </style>
