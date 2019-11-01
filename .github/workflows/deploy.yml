@@ -6,30 +6,17 @@ on:
       - master
 
 jobs:
-  build:
+  build-and-deploy:
 
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [8.x, 10.x, 12.x]
-
     steps:
     - name: Checkout
     - uses: actions/checkout@v1
       
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    
-    - name: Install Dependency
-      run: npm ci
-   
     - name: Build & Deploy to Github pages
       uses: JamesIves/github-pages-deploy-action@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
         FOLDER: dist
-        BUILD_SCRIPT: npm run build
+        BUILD_SCRIPT: npm ci && npm run build
