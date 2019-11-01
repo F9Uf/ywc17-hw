@@ -7,7 +7,7 @@
     <the-contact />
     <the-ktc />
     <the-nav-foot />
-    <the-footer :menus="menus" />
+    <the-footer :menus="menus2" />
   </div>
 </template>
 
@@ -30,7 +30,7 @@ export default {
       duration: '',
       detail: '',
       condition: '',
-      menus2: [],
+      menus2: []
     }
   },
   components: {
@@ -39,15 +39,17 @@ export default {
   },
   async created() {
     const data = await fetchChimShopChai();
-    console.log(data);
+    console.log(data);    
     this.menus = data.navbarItems;
     this.duration = data.duration;
     this.detail = data.detail;
     this.condition = data.condition;
-    this.menus2 = data.navbarItems;
-    this.menus2[1].label += 'ทั้งหมด';
-    this.menus2[2].label = 'รายชื่อร้านค้าที่เข้าร่วมรายการ';
-    
+    const temp = Array.from(data.navbarItems);
+    temp[1] = Object.assign({}, temp[1]);
+    temp[1].label += 'ทั้งหมด';
+    temp[2] = Object.assign({}, temp[2]);
+    temp[2].label = `รายชื่อ${ temp[2].label }รายการ`;
+    this.menus2 = temp;
   },
 }
 </script>
