@@ -1,26 +1,22 @@
 name: deploy
 
-on:  push
+on: push
 
 jobs:
-  build-and-deploy:
+  publish:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-    - uses: actions/checkout@v1
-      
-    - name: Use Node.js
+    - name: Checkout Code
+      uses: actions/checkout@v1
+    - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
-    
-    - name: Install Dependency
-      run: npm ci
-   
-    - name: Build
-      uses: npm run build
-    
-    - name: Deploy to Github pages
+    - name: Install Dependencies
+      run: npm install
+    - name: Build Bundle
+      run: npm run build
+    - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v2.5.0
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
