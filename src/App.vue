@@ -39,7 +39,6 @@ export default {
   },
   async created() {
     const data = await fetchChimShopChai();
-    console.log(data);    
     this.menus = data.navbarItems;
     this.duration = data.duration;
     this.detail = data.detail;
