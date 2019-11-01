@@ -11,12 +11,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v1
       
-    - name: Build & Deploy to Github pages
-      uses: JamesIves/github-pages-deploy-action@master
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+    
+    - name: Install Dependency
+      run: npm ci
+   
+    - name: Build
+      uses: npm run build
+    
+    - name: Deploy to Github pages
+      uses: peaceiris/actions-gh-pages@v2.5.0
       env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: dist
-        BUILD_SCRIPT: npm ci && npm run build
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACCESS_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./dist
