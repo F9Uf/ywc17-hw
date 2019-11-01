@@ -13,7 +13,7 @@
                     :href="menu.href" 
                     v-for="(menu, index) in menus" 
                     :key="index" target="__BLANK"
-                    class="px-2 py-1"
+                    class="px-2 py-1 link"
                 >
                     {{ menu.label }}
                 </b-nav-item>
@@ -43,12 +43,41 @@ export default {
 
 <style>
 @import url('../assets/css/TAT_Font.css');
-.header li.nav-item a{
+.header li.nav-item a {
     font-family: TATSanaChon;
     font-size: 13px;
     font-weight: bold;
-}
-.nav-item a{
     text-align: right;
+    transition: .5s all ease-in-out;
+}
+::after {
+    box-sizing: border-box;
+}
+@media (min-width: 576px ) {
+    .navbar-light .navbar-nav .nav-link {
+        color: #333333 !important;
+        position: relative;
+    }
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: #213A8F !important;
+    }
+    .navbar-light .navbar-nav a.nav-link:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 6px;
+        bottom: -8px;
+        left: 0;
+        background-color: #213A8F;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all .3s ease-in-out 0s;
+    }
+
+    .navbar-light .navbar-nav a.nav-link:hover:after {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+
 }
 </style>
