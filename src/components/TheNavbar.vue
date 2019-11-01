@@ -48,4 +48,7 @@ export default {
     font-size: 13px;
     font-weight: bold;
 }
+.nav-item a{
+    text-align: right;
+}
 </style>
