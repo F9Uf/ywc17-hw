@@ -41,8 +41,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import url('../assets/css/TAT_Font.css');
+
 .header li.nav-item a {
     font-family: TATSanaChon;
     font-size: 13px;
@@ -79,5 +80,13 @@ export default {
         transform: scaleX(1);
     }
 
+}
+
+button.navbar-toggler {
+    border: none;
+}
+
+button:focus {
+    outline: none;
 }
 </style>
