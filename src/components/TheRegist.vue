@@ -3,7 +3,7 @@
         <b-container fluid class="text-center">
             <b-row>
                 <b-col cols="12" class="py-2 since">ตั้งแต่วันที่</b-col>
-                <b-col cols="12" class="py-2 duration text-danger"><h1>{{ duration }}</h1></b-col>
+                <b-col cols="12" class="py-2 duration text-danger-header"><h1>{{ duration }}</h1></b-col>
                 <b-col cols="12" class="py-2">
                     <b-button variant="primary" class="btn-regist">
                         ลงทะเบียน2<br>

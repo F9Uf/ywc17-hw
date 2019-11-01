@@ -7,6 +7,7 @@
     <the-contact />
     <the-ktc />
     <the-nav-foot />
+    <the-footer :menus="menus" />
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import TheDetail from './components/TheDetail'
 import TheContact from './components/TheContact'
 import TheKtc from './components/TheKtc'
 import TheNavFoot from './components/TheNavFoot'
+import TheFooter from './components/TheFooter'
 
 export default {
   name: 'app',
@@ -28,11 +30,12 @@ export default {
       duration: '',
       detail: '',
       condition: '',
+      menus2: [],
     }
   },
   components: {
     TheNavbar, TheBanner, TheRegist, TheDetail, TheContact, TheKtc,
-    TheNavFoot
+    TheNavFoot, TheFooter
   },
   async created() {
     const data = await fetchChimShopChai();
@@ -41,6 +44,9 @@ export default {
     this.duration = data.duration;
     this.detail = data.detail;
     this.condition = data.condition;
+    this.menus2 = data.navbarItems;
+    this.menus2[1].label += 'ทั้งหมด';
+    this.menus2[2].label = 'รายชื่อร้านค้าที่เข้าร่วมรายการ';
     
   },
 }
@@ -51,6 +57,8 @@ export default {
 
 * {
   font-family: TATSanaSuksa ;
-  /* font-size: 16px; */
+}
+.text-danger-header {
+  color: #E6332A;
 }
 </style>

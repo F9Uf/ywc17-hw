@@ -3,7 +3,7 @@
         <b-container>
             <b-row>
                 <b-col lg="5" md="7">
-                    <h3 class="text-danger detail-header">
+                    <h3 class="text-danger-header detail-header">
                         มาตรการส่งเสริมการบริโภคในประเทศ 
                         <span class="nowrap">
                         "ชิมช้อปใช้"

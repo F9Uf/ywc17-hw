@@ -1,12 +1,12 @@
 <template>
-    <div class="nav-foot bg-light p-5 mt-5">
+    <div class="nav-foot bg-light px-5 py-4 mt-5">
         <b-container>
             <b-row>
                 <b-col md="3" sm="12" class="mt-2">
                     <img src="../assets/logochim.png" alt="">
                 </b-col>
                 <b-col md="3" sm="12" class="mt-3">
-                    <div class="head text-danger">
+                    <div class="head text-danger-header">
                         ข้อมูลลงทะเบียนประชาชน
                     </div>
                     <div class="detail">
@@ -17,7 +17,7 @@
                     </div>
                 </b-col>
                 <b-col md="3" sm="12" class="mt-3">
-                    <div class="head text-danger">
+                    <div class="head text-danger-header">
                         ข้อมูลลงทะเบียนผู้ประกอบการ
                     </div>
                     <div class="detail">
@@ -28,7 +28,7 @@
                     </div>
                 </b-col>
                 <b-col md="3" sm="12" class="mt-3">
-                    <div class="head text-danger">
+                    <div class="head text-danger-header">
                         ข้อมูลเที่ยวชิมช้อปใช้
                     </div>
                     <div class="detail">
