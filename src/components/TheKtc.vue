@@ -33,6 +33,12 @@
     width: 102px;
 }
 
+.ktc img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: .5s all ease-in-out;
+}
+
 @media (max-width: 577px) {
     .ktc img {
         width: 56px;

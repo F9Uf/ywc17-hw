@@ -33,6 +33,9 @@ export default {
 .regist {
     margin: 26px 0;
 }
+.regist hr {
+    margin: -20px 0 0 0;
+}
 .since {
     font-family: TATSanaChon;
     font-weight: bold;

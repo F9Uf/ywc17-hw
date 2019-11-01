@@ -18,7 +18,7 @@
 </template>
 <style>
 .banner {
-    margin: 50px 0 0 0;
+    margin: 55px 0 0 0;
 }
 @media (max-width: 530px) {
     .banner {

@@ -9,7 +9,14 @@
 
             <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav class="mx-auto">
-                <b-nav-item :href="menu.href" v-for="(menu, index) in menus" :key="index" target="__BLANK">{{ menu.label }}</b-nav-item>
+                <b-nav-item 
+                    :href="menu.href" 
+                    v-for="(menu, index) in menus" 
+                    :key="index" target="__BLANK"
+                    class="px-2 py-1"
+                >
+                    {{ menu.label }}
+                </b-nav-item>
             </b-navbar-nav>
             </b-collapse>
         </b-navbar>

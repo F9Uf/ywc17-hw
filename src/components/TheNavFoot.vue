@@ -2,11 +2,11 @@
     <div class="nav-foot bg-light p-5 mt-5">
         <b-container>
             <b-row>
-                <b-col>
+                <b-col md="3" sm="12" class="mt-2">
                     <img src="../assets/logochim.png" alt="">
                 </b-col>
-                <b-col>
-                    <div class="head">
+                <b-col md="3" sm="12" class="mt-3">
+                    <div class="head text-danger">
                         ข้อมูลลงทะเบียนประชาชน
                     </div>
                     <div class="detail">
@@ -16,8 +16,8 @@
                         ติดต่อ ชิมช้อปใช้ Call Center by Krungthai โทร.0 2111 1144
                     </div>
                 </b-col>
-                <b-col>
-                    <div class="head">
+                <b-col md="3" sm="12" class="mt-3">
+                    <div class="head text-danger">
                         ข้อมูลลงทะเบียนผู้ประกอบการ
                     </div>
                     <div class="detail">
@@ -27,8 +27,8 @@
                         ติดต่อ โทร.0 2270 6400 กด 7
                     </div>
                 </b-col>
-                <b-col>
-                    <div class="head">
+                <b-col md="3" sm="12" class="mt-3">
+                    <div class="head text-danger">
                         ข้อมูลเที่ยวชิมช้อปใช้
                     </div>
                     <div class="detail">
@@ -44,7 +44,15 @@
 </template>
 
 <style>
-    .nav-foot img{
-        width: 108px;
-    }
+.nav-foot img {
+    width: 108px;
+}
+.head {
+    font-weight: bold
+}
+.nav-foot .detail {
+    font-size: 14px;
+    line-height: 1.8;
+    padding-top: 5px;
+}
 </style>
