@@ -53,6 +53,12 @@ export default {
     border-radius: 5px;
     box-shadow: 0px 15px 30px 0 rgba(28, 78, 132, 0.4);
     background-color: #213A8F;
+    border: none;
+}
+
+.btn.btn-regist:hover {
+    box-shadow: none;
+    background-color: #fbbc33;
 }
 
 @media (max-width: 769px) {
