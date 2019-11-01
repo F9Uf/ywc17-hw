@@ -48,10 +48,11 @@ export default {
     font-family: TATSanaChon;
     font-weight: bold !important;
     font-size: 24px;
-    padding: 10px;
+    padding: 10px 15px;
     margin: 10px 0;
     border-radius: 5px;
-    box-shadow: 0px 15px 30px 0 rgba(28, 78, 132, 0.4)
+    box-shadow: 0px 15px 30px 0 rgba(28, 78, 132, 0.4);
+    background-color: #213A8F;
 }
 
 @media (max-width: 769px) {
